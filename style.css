@@ -1,0 +1,381 @@
+/* CSS BoilerPlate */
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Lilita+One&family=Satisfy&family=Sigmar&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Lilita+One&family=Satisfy&family=Sigmar&family=Space+Grotesk:wght@300..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Lilita+One&family=Quicksand:wght@300..700&family=Satisfy&family=Sigmar&family=Space+Grotesk:wght@300..700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  background-color: #001c27;
+  color: #fff;
+}
+
+main {
+  position: relative;
+  height: 100%;
+  width: 100%;
+}
+
+/* navigation bar */
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  height: 5vh;
+  width: 100%;
+  background-color: #05e6f2;
+
+}
+
+nav .logo {
+  font-size: 40px;
+  padding-left: 20px;
+  font-family: "Bebas Neue";
+  color: rgb(56, 56, 56);
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  font-family: "Space Grotesk"
+}
+
+.nav-links a {
+  text-decoration: none;
+  text-transform: none;
+  color: rgb(0, 0, 0);
+  position: relative;
+}
+
+.nav-links a::before {
+  content: "";
+  height: 1px;
+  width: 0%;
+  background-color: #001c27;
+  z-index: 2;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  opacity: 0;
+  transition: width 0.2s ease-in;
+}
+
+.nav-links a:hover::before {
+  width: 100%;
+  opacity: 1;
+}
+
+.nav-links a:hover {
+  color: rgb(59, 59, 59);
+}
+
+.nav-links .loginBtn {
+  display: flex;
+  padding: 7px 28px;
+  border-radius: 10px;
+  margin-right: 40px;
+  font-family: "Space Grotesk";
+  box-shadow: 0px 3px 0px 0px rgb(0, 0, 0);
+
+}
+
+.nav-links .loginBtn:active {
+  box-shadow: 0px 0px 0px 0px rgb(0, 0, 0);
+  transform: translateY(3.5px);
+
+}
+
+.nav-links .plusversion {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  padding: 7px 28px;
+  font-size: 8px;
+  border-radius: 10px;
+  font-family: "Space Grotesk";
+  box-shadow: 0px 3px 0px 0px rgb(0, 0, 0);
+
+
+
+}
+
+.nav-links .plusversion:active {
+  box-shadow: 0px 0px 0px 0px rgb(0, 0, 0);
+  transform: translateY(3.5px);
+
+}
+
+.nav-links .plusversion span {
+
+  font-size: 17px;
+}
+
+/* SpeedoMeter */
+.speedometer {
+  height: 50vh;
+  width: 40vw;
+  background-color: #d1f1ff;
+
+  margin: 5vh auto;
+
+  border-radius: 20px;
+  border: 2px solid white;
+}
+
+
+/* Notification */
+.notification {
+  position: fixed;
+  top: 86%;
+  right: 0.5%;
+  z-index: 99;
+
+
+}
+
+.toast {
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  /* border: 1px solid white; */
+  position: relative;
+  padding: 10px;
+  color: white;
+  margin-bottom: 10px;
+  width: 350px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  /* border-radius: 5px; */
+  --color: #e9bd0c;
+  background-image:
+    linear-gradient(to right, #e9bd0c90, #22242f 40%);
+  animation: show 0.4s ease 1 forwards;
+}
+
+.toast span {
+  color: var(--color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: x-large;
+}
+
+.toast .title {
+  font-size: x-large;
+  font-weight: bold;
+  font-family: "Bebas Neue";
+  font-weight: 400;
+}
+
+.toast h4,
+.toast span:nth-child(3) {
+  color: white;
+  opacity: 0.5;
+}
+
+.toast h4 {
+  font-family: "Space Grotesk";
+}
+
+.toast span:nth-child(3) {
+  cursor: pointer;
+}
+
+@keyframes show {
+  0% {
+    transform: translateX(100%);
+
+  }
+
+  40% {
+    transform: translateX(-3%);
+
+  }
+
+  80% {
+    transform: translate(0%);
+  }
+
+  100% {
+    transform: translateX(-5%);
+  }
+}
+
+.toast::before {
+  height: 2px;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background-color: var(--color);
+  content: "";
+  box-shadow: 0 0 10px var(--color);
+  animation: timeOut 6s linear forwards;
+}
+
+@keyframes timeOut {
+  to {
+    width: 0;
+  }
+
+
+}
+
+/* LeaderBoard */
+
+.leader-board {
+  height: 730px;
+  width: 450px;
+  background-color: red;
+  position: absolute;
+  top: 0%;
+  left: 2%;
+  border-radius: 10px;
+}
+
+/* tests */
+.tests {
+
+
+  height: 730px;
+  width: 400px;
+  background-color: #1ff4ff;
+  position: absolute;
+  top: 0%;
+  right: 3.5%;
+  border-radius: 10px;
+  padding: 20px;
+  font-family: "Quicksand";
+}
+
+.hero-header {
+  border-bottom: solid 1px rgb(98, 98, 98);
+}
+
+.hero-header h1 {
+  font-size: 34px;
+  text-align: center;
+}
+
+.login-box {
+  height: 13vh;
+  width: 100%;
+  background-color: #FEA245;
+  margin-top: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  /* font-family: "Quicksand"; */
+  border-radius: 7px;
+  padding: 13px;
+  box-shadow: 0 1px 4px 0 rgb(68, 67, 67);
+}
+
+.login-box h1 {
+  font-size: 24px;
+  color: white;
+}
+
+.inner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 55px;
+}
+
+.inner a {
+  color: white;
+}
+
+.inner button {
+  background-color: #fff;
+  color: #ff8000;
+  padding: 7px 19px;
+  border-radius: 20px;
+  border: none;
+  box-shadow: 0 2px 0 0 rgb(125, 125, 125);
+  transition: transform 0.2s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.inner button:hover {
+  transform: scale(1.1);
+  box-shadow: 0 2.4px 0 0 rgb(125, 125, 125);
+}
+
+.timed-test {
+  /* border: 1px solid white; */
+  user-select: none;
+  height: 40vh;
+  margin: 15px 0;
+}
+
+.time{
+  margin: 15px 0;
+  border: black 1px solid;
+  height: 10vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #fff;
+  color: black;
+  padding: 30px;
+  border-radius: 5px;
+  transition: background-color 0.2s linear , transform 0.2s linear;
+}
+.selected-time {
+  transform: scale(1.1);
+  background-color: #2B98C7;
+}
+
+.time:hover {
+  background-color: #D6EAF8 !important;
+
+}
+
+.time h1{
+  font-size: 23px;
+}
+.time button{
+  padding: 5px 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #FFCF46;
+
+  border-radius: 10px;
+  border: none;
+}
+.time button:hover{
+  background-color: #FFEBB1;
+  transform: translateY(-2px);
+}
+.time button h1{
+  font-size: 15px;
+}
+.timed-test #head {
+  text-align: center;
+  border-bottom: 1px solid rgb(0, 0, 0);
+}
+
+/* Chart */
+.chart {
+  height: 300px;
+  width: 700px;
+  background-color: green;
+  position: absolute;
+  top: 53%;
+  left: 30%;
+  border-radius: 10px;
+}

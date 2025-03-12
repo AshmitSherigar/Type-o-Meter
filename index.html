@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Word-o-Meter</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="favicon.jpg" type="image/x-icon">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
+
+</head>
+
+<body>
+    <nav>
+        <h1 class="logo">Word-o-Meter</h1>
+        <div class="nav-links">
+            <button class="plusversion">
+                <span class="material-symbols-outlined">crown</span>
+                <h1>Get Plus +++</h1>
+            </button>
+            <a href="#">Achievements</a>
+            <a href="#">Awards</a>
+            <button class="loginBtn">Sign Up</button>
+        </div>
+    </nav>
+    <main>
+        <div class="speedometer">
+            <svg width="650" height="500" viewBox="0 0 250 150" xmlns="http://www.w3.org/2000/svg">
+                <!-- Speedometer Arc -->
+                <path d="M 30 120 A 95 95 0 0 1 220 120" fill="none" stroke="black" stroke-width="9"
+                    stroke-linecap="round" />
+
+                <!-- Needle -->
+                <line x1="125" y1="120" x2="170" y2="50" stroke="red" stroke-width="4.5" stroke-linecap="round" />
+
+                <!-- Center Circle -->
+                <circle cx="125" cy="120" r="3" fill="black" />
+            </svg>
+
+        </div>
+        <div class="notification">
+            <!-- <div class="toast">
+                    <span class="material-symbols-outlined">
+                        warning
+                    </span>
+                    <div class="content">
+                        <div class="title">Warning!</div>
+                        <h4>This is a Warning.</h4>
+                    </div>
+                    <span class="material-symbols-outlined close-btn">
+                        close
+                    </span> -->
+        </div>
+        <div class="leader-board">
+            leader-board
+        </div>
+        <div class="tests">
+            <div class="hero-header">
+                <h1>Typing Test</h1>
+            </div>
+            <div class="login-box">
+                <h1>Don't lose the progress on your test!</h1>
+                <div class="inner">
+                    <a href="#">Log In</a>
+                    <button class="free-account">Create Free Account</button>
+                </div>
+            </div>
+            <div class="timed-test">
+                <h1 id="head">Timed Tests</h1>
+                <div class="time">
+                    <h1>1:00 Test</h1>
+                    <button class="startBtn">
+                        <span class="material-symbols-outlined">
+                            play_arrow
+                        </span>
+                        <h1>Start Test</h1>
+                    </button>
+                </div>
+                <div class="time">
+                    <h1>3:00 Test</h1>
+                    <button class="startBtn">
+                        <span class="material-symbols-outlined">
+                            play_arrow
+                        </span>
+                        <h1>Start Test</h1>
+                    </button>
+                </div>
+                <div class="time">
+                    <h1>5:00 Test</h1>
+                    <button class="startBtn">
+                        <span class="material-symbols-outlined">
+                            play_arrow
+                        </span>
+                        <h1>Start Test</h1>
+                    </button>
+                </div>
+            </div>
+            <div class="timed-test">
+                <h1 id="head">Timed Pages</h1>
+                <div class="time">
+                    <h1>1:00 Test</h1>
+                    <button class="startBtn">
+                        <span class="material-symbols-outlined">
+                            play_arrow
+                        </span>
+                        <h1>Start Test</h1>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="chart">
+            chart
+        </div>
+
+
+
+    </main>
+
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>
