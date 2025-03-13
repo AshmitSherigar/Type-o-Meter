@@ -125,12 +125,12 @@ nav .logo {
 .speedometer {
   height: 50vh;
   width: 40vw;
-  background-color: #d1f1ff;
+  background-color: #0cf3ff;
 
   margin: 5vh auto;
 
   border-radius: 20px;
-  border: 2px solid white;
+  border: 1px solid white;
 }
 
 
@@ -237,11 +237,90 @@ nav .logo {
 .leader-board {
   height: 730px;
   width: 450px;
-  background-color: red;
+  background-color: #1FF4FF;
+  color: black;
+  font-family: 'Quicksand';
   position: absolute;
   top: 0%;
   left: 2%;
   border-radius: 10px;
+  padding: 3px;
+
+}
+
+.leader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 10px;
+  background-color: white;
+  height: 70px;
+  border-radius: 5px;
+  padding: 11px;
+
+}
+
+.leader h1 {
+  font-size: 20px;
+}
+
+.leader h2 {
+  color: gold;
+}
+
+.date {
+  height: 60px;
+  width: 55px;
+  background-color: rgb(182, 182, 182);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  border-radius: 2px;
+
+}
+
+.number {
+  height: 30px;
+  width: 90%;
+  background: rgb(255, 255, 255);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.personal-best {
+  height: 40vh;
+
+}
+
+.personal-best #personal-head {
+  text-align: center;
+  border-bottom: black 1px solid;
+}
+
+.leader-board .username {
+  text-align: center;
+
+}
+
+.personal-best button {
+  padding: 6px 15px;
+  border-radius: 10px;
+  background-color: #71B16B;
+  color: white;
+  font-family: "Quicksand";
+  font-size: 13px;
+  transition: transform 0.1s linear;
+
+}
+
+.personal-best button:hover {
+  background-color: #B4DB9B;
+}
+
+.personal-best button:active {
+  transform: translateY(1.2px);
 }
 
 /* tests */
@@ -307,6 +386,7 @@ nav .logo {
   border: none;
   box-shadow: 0 2px 0 0 rgb(125, 125, 125);
   transition: transform 0.2s cubic-bezier(0.075, 0.82, 0.165, 1);
+  cursor: pointer;
 }
 
 .inner button:hover {
@@ -321,10 +401,10 @@ nav .logo {
   margin: 15px 0;
 }
 
-.time{
+.time {
   margin: 15px 0;
   border: black 1px solid;
-  height: 10vh;
+  height: 6vh;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -332,8 +412,9 @@ nav .logo {
   color: black;
   padding: 30px;
   border-radius: 5px;
-  transition: background-color 0.2s linear , transform 0.2s linear;
+  transition: background-color 0.2s linear, transform 0.2s linear;
 }
+
 .selected-time {
   transform: scale(1.1);
   background-color: #2B98C7;
@@ -344,10 +425,11 @@ nav .logo {
 
 }
 
-.time h1{
+.time h1 {
   font-size: 23px;
 }
-.time button{
+
+.time button {
   padding: 5px 15px;
   display: flex;
   align-items: center;
@@ -356,15 +438,29 @@ nav .logo {
 
   border-radius: 10px;
   border: none;
+  cursor: pointer;
 }
-.time button:hover{
+
+.time button:hover {
   background-color: #FFEBB1;
   transform: translateY(-2px);
 }
-.time button h1{
+
+.time button h1 {
   font-size: 15px;
 }
+
 .timed-test #head {
+  text-align: center;
+  border-bottom: 1px solid rgb(0, 0, 0);
+}
+
+.timed-para #head {
+  text-align: center;
+  border-bottom: 1px solid rgb(0, 0, 0);
+}
+
+.leader-board-main #head {
   text-align: center;
   border-bottom: 1px solid rgb(0, 0, 0);
 }
@@ -373,9 +469,23 @@ nav .logo {
 .chart {
   height: 300px;
   width: 700px;
-  background-color: green;
+  background-color: rgba(255, 255, 255, 0.9);
   position: absolute;
   top: 53%;
   left: 30%;
-  border-radius: 10px;
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+/* Initial state */
+body {
+  transition: opacity 0.3s ease-out;
+}
+
+/* Fade-out effect when class is added */
+body.fade-out {
+  opacity: 0;
 }

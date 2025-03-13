@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Word-o-Meter | Type Now!</title>
+    <link rel="stylesheet" href="wpmTester.css">
+    <link rel="shortcut icon" href="../images/favicon.jpg" type="image/x-icon">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
+
+</head>
+
+<body>
+    <nav>
+        <button class="go-back">
+            <span class="material-symbols-outlined">
+                arrow_back
+            </span>
+        </button>
+        <h1 class="logo">Word-o-Meter</h1>
+        <div class="nav-links">
+            <div class="timer-clock">1:00</div>
+            <div class="redo" onclick="restartTest()">
+                <span class="material-symbols-outlined">
+                    undo
+                </span>
+            </div>
+            <div class="volume" onclick="toggleSound()">
+                <span class="material-symbols-outlined">
+                    volume_up
+                </span>
+            </div>
+
+
+
+        </div>
+    </nav>
+    <div class="container">
+        <div id="word-display"></div>
+        <div id="input-box" contenteditable="true"></div>
+        <!-- <p class="wpm">WPM: <span id="wpm-count">0</span></p> -->
+         <!-- <div class="results">
+            <h2>Test Completed</h2>
+            <p>WPM: <strong>20</strong></p>
+            <p>Accuracy: <strong>100%</strong></p>
+            <button onclick="restartTest()">Restart</button>
+         </div> -->
+         <div id="results-container"></div>
+         <p class="wpm">WPM: <span id="wpm-count">0</span></p>
+
+    </div>
+
+    <!-- Audio Elements -->
+    <!-- <audio id="correct-sound" src="success.mp3"></audio> -->
+    <audio id="error-sound" src="../error.mp3"></audio>
+    <script src="wpmTester.js"></script>
+</body>
+
+</html>

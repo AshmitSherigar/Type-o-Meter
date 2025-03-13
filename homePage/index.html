@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Word-o-Meter</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="shortcut icon" href="favicon.jpg" type="image/x-icon">
+    <link rel="shortcut icon" href="../images/favicon.jpg" type="image/x-icon">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
 
 </head>
@@ -53,7 +53,58 @@
                     </span> -->
         </div>
         <div class="leader-board">
-            leader-board
+            <div class="leader-board-main">
+                <h1 id="head">LeaderBoard</h1>
+                <div class="leader">
+                    <div class="date">
+                        <h4>MAR</h4>
+                        <div class="number">11</div>
+                    </div>
+                    <h1>29 WPM</h1>
+                    <h1>66% Accuracy</h1>
+                    <div class="username">
+                        <h1>Username:</h1>
+                        <h2>Ashmit</h2>
+                    </div>
+                </div>
+                <div class="leader">
+                    <div class="date">
+                        <h4>MAR</h4>
+                        <div class="number">12</div>
+                    </div>
+                    <h1>60 WPM</h1>
+                    <h1>98% Accuracy</h1>
+                    <div class="username">
+                        <h1>Username:</h1>
+                        <h2>Ti Ling</h2>
+                    </div>
+                </div>
+                <div class="leader">
+                    <div class="date">
+                        <h4>MAR</h4>
+                        <div class="number">13</div>
+                    </div>
+                    <h1>80 WPM</h1>
+                    <h1>100% Accuracy</h1>
+                    <div class="username">
+                        <h1>Username:</h1>
+                        <h2>IronMan20</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="personal-best">
+                <h1 id="personal-head">Personal Best</h1>
+                <div class="leader">
+                    <div class="date">
+                        <h4>MAR</h4>
+                        <div class="number">13</div>
+                    </div>
+                    <h1>80 WPM</h1>
+                    <h1>100% Accuracy</h1>
+                    <button class="print-certificate">Print Certificate</button>
+                </div>
+            </div>
+
         </div>
         <div class="tests">
             <div class="hero-header">
@@ -96,11 +147,11 @@
                     </button>
                 </div>
             </div>
-            <div class="timed-test">
+            <div class="timed-para">
                 <h1 id="head">Timed Pages</h1>
                 <div class="time">
                     <h1>1:00 Test</h1>
-                    <button class="startBtn">
+                    <button class="startBtn" >
                         <span class="material-symbols-outlined">
                             play_arrow
                         </span>
@@ -110,7 +161,7 @@
             </div>
         </div>
         <div class="chart">
-            chart
+            <canvas id="myChart"></canvas>
         </div>
 
 
@@ -118,7 +169,7 @@
     </main>
 
 
-
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="script.js"></script>
 </body>
 
